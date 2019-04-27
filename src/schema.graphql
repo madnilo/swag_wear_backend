@@ -1,11 +1,19 @@
-type Dog {
-    name: String!
-}
+# import * from './generated/prisma.graphql'
 
+ 
+# Inputs
+# Create custom inputs types as/if needed
+
+
+# Mutations
+# Mutations that are exposed to my javascript code
 type Mutation {
-    createDog(name: String!): Dog
+    createItem(data: ItemUpdateInput): Item
 }
 
+
+# Queries
+# Queries that are exposed to my javascript code
 type Query {
-    dogs: [Dog]!
+    items: [Item]!
 }

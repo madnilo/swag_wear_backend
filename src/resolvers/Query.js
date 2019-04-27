@@ -1,7 +1,9 @@
+const { forwardTo } = require('prisma-binding')
+
 const Query = {
-    dogs: function (parent, args, ctx, info) {
-        return global.dogs || []
-    }
+    //TODO check authorization
+    items: forwardTo('db')
+
 };
 
 module.exports = Query;
