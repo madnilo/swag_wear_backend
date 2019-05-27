@@ -17,6 +17,8 @@ type Mutation {
 # Queries
 # Queries that are exposed to my javascript code
 type Query {
-    items: [Item]!
+    items (where: ItemWhereInput, 
+    orderBy: ItemOrderByInput, skip: Int, first: Int): [Item]!
     item(where: ItemWhereUniqueInput!): Item
+    itemsConnection(where: ItemWhereUniqueInput): ItemConnection!
 }
