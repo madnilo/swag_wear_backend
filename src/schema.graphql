@@ -1,9 +1,5 @@
 # import * from './generated/prisma.graphql'
 
- 
-# Inputs
-# Create custom inputs types as/if needed
-
 
 # Mutations
 # Mutations that are exposed to my javascript code
@@ -11,6 +7,7 @@ type Mutation {
     createItem(title: String, description: String, price: Int, image: String, largeImage: String): Item!
     updateItem(id: ID!, title: String, description: String, price: Int): Item!
     deleteItem(id: ID!): Item!
+    signup(email: String!, password: String!, name: String!): User!
 }
 
 
